@@ -1,42 +1,76 @@
-# Nuxt 3 Minimal Starter
+# Шаблон Nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Шаблон Nuxt 3 приложения с настроенными зависимостями, линтерами и т.д.
 
-## Setup
+## Что нужно сделать первым коммитом
 
-Make sure to install the dependencies:
+- [ ]  Изменить в файле `.github/workflows/release.yml` репозиторий
+- [ ]  Изменить `hostname` в `nuxt.config.ts`
+- [ ]  Удалить этот раздел
 
-```bash
-# yarn
-yarn install
+## Оглавление
 
-# npm
-npm install
+- [Что нужно сделать первым коммитом](#что-нужно-сделать-первым-коммитом)
+- [Оглавление](#оглавление)
+- [Локальная разработка](#локальная-разработка)
+- [Продакшн](#продакшн)
+- [Тестирование](#тестирование)
+- [Линт](#линт)
+- [Локальные переменные](#локальные-переменные)
 
-# pnpm
-pnpm install
+## Локальная разработка
+
+1. Создать `.env` файл по примеру из `.env.example`
+1. Установить зависимости
+
+   ```sh
+   pnpm install
+   ```
+
+1. Запустить `dev`-сервер
+
+   ```sh
+   pnpm dev
+   ```
+
+## Продакшн
+
+Сборка в продакшн
+
+```sh
+pnpm build
 ```
 
-## Development Server
+Превью продакшн билда
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+```sh
+pnpm preview
 ```
 
-## Production
+## Тестирование
 
-Build the application for production:
+Проверка типов
 
-```bash
-npm run build
+```sh
+pnpm typecheck
 ```
 
-Locally preview production build:
+## Линт
 
-```bash
-npm run preview
+Запуск ESLint
+
+```sh
+pnpm lint
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Запуск Prettier
+
+```sh
+pnpm prettier
+```
+
+## Локальные переменные
+
+| Название переменной | Описание          | Пример          |
+| ------------------- | ----------------- | --------------- |
+| `EXAMPLE`           | Пример переменной | `example value` |
